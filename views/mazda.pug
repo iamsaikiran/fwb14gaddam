@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+   - var results = [{"cost":25990,"model":"mazda cx-5","color":"white"},{"cost":22990,"model":"mazda mx-5","color":"blue"},{"cost":24990,"model":"mazda mx-30","color":"black"}]
+  div(class="container-fuild")
+    div(class="row")
+      each result,index in results
+        div(class = "col-sm-2" id=index onclick=`age(${index})`) 
+          p #{result.cost}
+          p #{result.model}
+          p #{result.color}
+
+          
+  script.
+    function age(element){
+      alert(`car place is ${element+1}.`)
+    }
