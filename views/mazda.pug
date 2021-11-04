@@ -34,12 +34,12 @@ block content
   div(class="container-fluid")
             each v,index in mazda  
              div(class ="row")
-                div(class="col-sm-2", style="background-color: rgb(147, 226, 147);", onclick='buy(${index})') #{v.cost}
-                div(class="col-sm-2", style="background-color: yellowgreen;", onclick='buy(${index})' ) #{v.model}
-                div(class="col-sm-2", style="background-color: green;", onclick='buy(${index})' ) #{v.color}
+                div(class="col-sm-2", style="background-color: rgb(147, 226, 147);", onclick=`buy(${index})` ) #{v.cost}
+                div(class="col-sm-2", style="background-color: yellowgreen;", onclick=`buy(${index})` ) #{v.model}
+                div(class="col-sm-2", style="background-color: green;", onclick=`buy(${index})` ) #{v.color}
    
   script.                
         function buy(intem)
         {
-              alert('car price is ${intem+1}.')
+              alert(`car price is ${intem+1}.`)
         } 
